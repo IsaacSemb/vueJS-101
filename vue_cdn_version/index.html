@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- installing vue via CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue Via CDN</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      {{message}}
+    </div>
+
+    <script>
+
+      // create a vue function that takes an object as its param
+      const app = Vue.createApp(
+        // first parameter is an object that has a  function
+        {
+          // object has attribute that is function called data
+          data() {
+            return {
+              // function returns an object
+              message: "This is Vue 101",
+            };
+          },
+        }
+      );
+
+      app.mount('#app')
+
+    </script>
+    
+  </body>
+</html>
