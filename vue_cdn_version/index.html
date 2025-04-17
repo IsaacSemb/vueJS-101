@@ -17,6 +17,8 @@
       <button @click = "clickMe1"> click me 1</button>
       <span> &nbsp; &nbsp; &nbsp; </span>
       <button @click = "clickMe2"> click me 2</button>
+      <span> &nbsp; &nbsp; &nbsp; </span>
+      <button @click = "clickMe3"> click me 3</button>
 
     
     
@@ -47,6 +49,13 @@
             // another method
             clickMe2(){
               console.log('button 2222 clicked');
+            },
+
+            // another method
+            clickMe3(){
+              console.log('button 3333 clicked');
+              this.message = 'Updated Message'
+            
             }
 
           }
