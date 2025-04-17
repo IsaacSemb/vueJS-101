@@ -10,17 +10,24 @@
     <title>Vue Via CDN</title>
   </head>
   <body>
-    
     <div id="app">
-      {{message}}
+    
+      <h1>{{message}}</h1>
+
+      <button @click = "clickMe1"> click me 1</button>
+      <span> &nbsp; &nbsp; &nbsp; </span>
+      <button @click = "clickMe2"> click me 2</button>
+
+    
+    
     </div>
 
     <script>
-
       // create a vue function that takes an object as its param
       const app = Vue.createApp(
-        // first parameter is an object that has a  function
+        // first parameter is an object that has a function
         {
+
           // object has attribute that is function called data
           data() {
             return {
@@ -28,12 +35,26 @@
               message: "This is Vue 101",
             };
           },
+
+          // another attribute of the object is the methods
+          methods:{  // carries all the method you havve called
+
+            // method1
+            clickMe1(){
+              console.log('button 1111 clicked');
+            },
+
+            // another method
+            clickMe2(){
+              console.log('button 2222 clicked');
+            }
+
+          }
         }
+      
       );
+      app.mount("#app");
 
-      app.mount('#app')
-
-    </script>
-    
+      </script>
   </body>
 </html>
