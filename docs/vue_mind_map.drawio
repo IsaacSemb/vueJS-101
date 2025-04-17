@@ -1,0 +1,61 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="xhMBnV4NRnen-BT5X3mq">
+    <mxGraphModel dx="2071" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-V1nGsr40axhi8tRaIeW-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" vertex="1" parent="1">
+          <mxGeometry x="100" y="70" width="600" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="155" y="125" width="490" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-4" value="Create App Method on Vue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="50" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-6" value="Takes an object parameter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="110" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-7" value="data() --- function&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;returns object of all variables you want to use in you app&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="212.5" y="190" width="375" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-8" value="methods --- object&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;all functions you want to call in your app&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="212.5" y="320" width="375" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=4;" edge="1" parent="1" source="-V1nGsr40axhi8tRaIeW-6" target="-V1nGsr40axhi8tRaIeW-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="sourcePoint" />
+            <mxPoint x="80" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=4;" edge="1" parent="1" source="-V1nGsr40axhi8tRaIeW-4" target="-V1nGsr40axhi8tRaIeW-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="sourcePoint" />
+            <mxPoint x="80" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-11" value="Takes an object parameter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="280" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;strokeWidth=4;" edge="1" parent="1" source="-V1nGsr40axhi8tRaIeW-11" target="-V1nGsr40axhi8tRaIeW-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="sourcePoint" />
+            <mxPoint x="80" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=4;" edge="1" parent="1" source="-V1nGsr40axhi8tRaIeW-11" target="-V1nGsr40axhi8tRaIeW-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="sourcePoint" />
+            <mxPoint x="80" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-18" value="method 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="400" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-V1nGsr40axhi8tRaIeW-19" value="method 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="440" width="230" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
