@@ -1,18 +1,6 @@
-<script>
+<script setup>
 
 import { ref } from 'vue';
-
-export default {
-    setup() {
-        
-
-        // const name = "Isaac Semb";
-        // const status = false;
-        // const otherStatus = 'active';
-        // const available = "no";
-        // const numbers = ["one", "two", "three"];
-        // const semb_github = "https://github.com/IsaacSemb";
-        // const semb_linkedIn = "https://www.linkedin.com/in/isaac-semb/";
 
         const name = ref("Isaac Semb");
         const status = ref(false);
@@ -33,21 +21,7 @@ export default {
                 otherStatus.value = 'active';
             }
         };
-
-
-        return {
-            name,
-            status,
-            otherStatus,
-            available,
-            numbers,
-            semb_github,
-            semb_linkedIn,
-            toggleStatus,
-            toggleOtherStatus,
-        };
-    },
-};
+        
 </script>
 
 <template>
