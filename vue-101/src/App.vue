@@ -1,37 +1,64 @@
 <script>
+
+import { ref } from 'vue';
+
 export default {
-    data() {
+    setup() {
+        
+
+        // const name = "Isaac Semb";
+        // const status = false;
+        // const otherStatus = 'active';
+        // const available = "no";
+        // const numbers = ["one", "two", "three"];
+        // const semb_github = "https://github.com/IsaacSemb";
+        // const semb_linkedIn = "https://www.linkedin.com/in/isaac-semb/";
+
+        const name = ref("Isaac Semb");
+        const status = ref(false);
+        const otherStatus = ref('active');
+        const available = ref("no");
+        const numbers = ref(["one", "two", "three"]);
+        const semb_github = "https://github.com/IsaacSemb";
+        const semb_linkedIn = "https://www.linkedin.com/in/isaac-semb/";
+        
+        const toggleStatus = () => {
+            status.value = !status.value;
+        };
+
+        const toggleOtherStatus = () => {
+            if (otherStatus.value === 'active') {
+                otherStatus.value = 'inactive';
+            } else {
+                otherStatus.value = 'active';
+            }
+        };
+
+
         return {
-            name: 'Isaac Semb',
-            status: false,
-            available: 'no',
-            numbers: ['one', 'two', 'three'],
-            semb_github: 'https://github.com/IsaacSemb',
-            semb_linkedIn: 'https://www.linkedin.com/in/isaac-semb/'
-        }
+            name,
+            status,
+            otherStatus,
+            available,
+            numbers,
+            semb_github,
+            semb_linkedIn,
+            toggleStatus,
+            toggleOtherStatus,
+        };
     },
-    methods: {
-        toggleStatus() {
-            this.status = !this.status
-        }
-    }
-
-}
-
+};
 </script>
 
-
 <template>
-
     <h1>Hello, {{ name }}</h1>
 
-
     <!-- if statements or if directive -->
-    <h2 v-if="status"> Status is True </h2>
-    <h2 v-else="status"> status is false </h2>
+    <h2 v-if="status">Status is True</h2>
+    <h2 v-else="status">status is false</h2>
 
-    <h2 v-if="available === 'yes'"> user is available </h2>
-    <h2 v-else="available==='no'"> user is NOT available </h2>
+    <h2 v-if="available === 'yes'">user is available</h2>
+    <h2 v-else="available === 'no'">user is NOT available</h2>
 
     <!-- for statements or for directives -->
     <h3>Numbers</h3>
@@ -49,26 +76,19 @@ export default {
 
     <!-- event listeners  -->
     <h2>
-        <button v-on:click="toggleStatus">
-            Change Status
-        </button>
+        <button v-on:click="toggleStatus">Change Status</button>
     </h2>
 
     <h2>
-        <button @click="toggleStatus">
-            Change Status
-        </button>
+        <button @click="toggleStatus">Change Status</button>
     </h2>
 
-
-
-
-
-
-
+    <h2>
+        <h2 v-if="otherStatus==='active'">user is active</h2>
+        <h2 v-else="otherStatus==='inactive'">user is inactive</h2>
+        <button @click="toggleOtherStatus">Change Status</button>
+    </h2>
 </template>
-
-
 
 <style scoped>
 h1 {
