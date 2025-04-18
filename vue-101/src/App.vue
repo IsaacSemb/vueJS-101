@@ -2,26 +2,42 @@
 
 import { ref } from 'vue';
 
-        const name = ref("Isaac Semb");
-        const status = ref(false);
-        const otherStatus = ref('active');
-        const available = ref("no");
-        const numbers = ref(["one", "two", "three"]);
-        const semb_github = "https://github.com/IsaacSemb";
-        const semb_linkedIn = "https://www.linkedin.com/in/isaac-semb/";
-        
-        const toggleStatus = () => {
-            status.value = !status.value;
-        };
+const name = ref("Isaac Semb");
+const status = ref(false);
+const otherStatus = ref('active');
+const available = ref("no");
+const numbers = ref(["one", "two", "three"]);
+const semb_github = "https://github.com/IsaacSemb";
+const semb_linkedIn = "https://www.linkedin.com/in/isaac-semb/";
+const newNumber = ref("")
 
-        const toggleOtherStatus = () => {
-            if (otherStatus.value === 'active') {
-                otherStatus.value = 'inactive';
-            } else {
-                otherStatus.value = 'active';
-            }
-        };
-        
+
+const toggleStatus = () => {
+    status.value = !status.value;
+};
+
+
+const toggleOtherStatus = () => {
+
+    if (otherStatus.value === 'active') {
+        otherStatus.value = 'inactive';
+    } else {
+        otherStatus.value = 'active';
+    }
+};
+
+const addTask = () => {
+
+    toggleOtherStatus()
+
+    if (newNumber.value.trim() !== '') {
+        numbers.value.push(newNumber.value)
+        newNumber.value = ''
+    }
+
+}
+
+
 </script>
 
 <template>
@@ -58,10 +74,24 @@ import { ref } from 'vue';
     </h2>
 
     <h2>
-        <h2 v-if="otherStatus==='active'">user is active</h2>
+        <h2 v-if="otherStatus === 'active'">user is active</h2>
         <h2 v-else="otherStatus==='inactive'">user is inactive</h2>
         <button @click="toggleOtherStatus">Change Status</button>
     </h2>
+
+
+    <!-- dealing with forms -->
+    <h1> forms </h1>
+
+    <form @submit.prevent="addTask">
+        <label for="newNumber">Task: </label>
+        <input id="newNumber" name="newNumber" type="text" v-model="newNumber">
+        <button type="submit">Add Task</button>
+    </form>
+
+
+
+
 </template>
 
 <style scoped>
