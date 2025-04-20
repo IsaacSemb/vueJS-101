@@ -3,6 +3,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import Hero from './components/Hero.vue';
+import HomeCards from './components/HomeCards.vue';
 
 </script>
 
@@ -13,6 +14,7 @@ import Hero from './components/Hero.vue';
     title="This is Vue Jobs" 
     subtitle="Hone and sharpen your skills"
     />
+    <HomeCards />
 
 </template>
 
