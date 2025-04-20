@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const name = ref("Isaac Semb");
 const status = ref(false);
@@ -37,6 +37,25 @@ const addTask = () => {
 
 }
 
+const deleteItem = (index) => {
+    numbers.value.splice(index, 1)
+
+}
+
+onMounted(
+    async ()=>{
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+            const data = await response.json()
+            numbers.value = data.map(
+                (task)=>task.title
+            )
+
+        } catch (error) {
+            console.log('error fetching tasks')
+        }
+    }
+)
 
 </script>
 
@@ -53,7 +72,8 @@ const addTask = () => {
     <!-- for statements or for directives -->
     <h3>Numbers</h3>
     <ul>
-        <li v-for="nbr in numbers" :key="nbr">{{ nbr }}</li>
+        <li v-for="(nbr, index) in numbers" :key="nbr"><span>{{ nbr }}</span><button
+                @click="deleteItem(index)">X</button></li>
     </ul>
 
     <!-- binding dynamic data to elements -->
