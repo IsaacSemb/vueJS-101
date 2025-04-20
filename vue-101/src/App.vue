@@ -9,7 +9,10 @@ import Hero from './components/Hero.vue';
 <!-- html  -->
 <template>
     <NavBar />
-    <Hero />
+    <Hero 
+    title="This is Vue Jobs" 
+    subtitle="Hone and sharpen your skills"
+    />
 
 </template>
 
