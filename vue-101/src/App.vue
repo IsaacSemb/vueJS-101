@@ -1,12 +1,13 @@
 
 <!-- scripting for logic -->
-<script>
+<script setup>
+import NavBar from './components/NavBar.vue';
 
 </script>
 
 <!-- html  -->
 <template>
-    <h1>Vue Jobs</h1>
+    <NavBar />
 
 </template>
 
