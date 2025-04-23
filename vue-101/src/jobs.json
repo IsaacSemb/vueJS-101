@@ -1,5 +1,4 @@
-{
-  "jobs": [
+[
     {
       "title": "Senior Vue Dev",
       "type": "Full-Time",
@@ -84,5 +83,4 @@
         "contactPhone": "555-555-5555"
       }
     }
-  ]
-}
+]
