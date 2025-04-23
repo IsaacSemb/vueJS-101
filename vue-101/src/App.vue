@@ -4,6 +4,7 @@
 import NavBar from './components/NavBar.vue';
 import Hero from './components/Hero.vue';
 import HomeCards from './components/HomeCards.vue';
+import JobListings from './components/JobListings.vue';
 
 </script>
 
@@ -15,6 +16,7 @@ import HomeCards from './components/HomeCards.vue';
     subtitle="Hone and sharpen your skills"
     />
     <HomeCards />
+    <JobListings />
 
 </template>
 
