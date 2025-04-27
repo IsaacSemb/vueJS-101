@@ -2,10 +2,15 @@
 import JobListingCard from './JobListingCard.vue';
 import JobListing from './JobListing.vue';
 // import jobData from "@/jobs.json"
-import { ref, defineProps, onMounted } from 'vue';
+import { reactive, defineProps, onMounted } from 'vue';
 import axios from 'axios';
 
-const allJobs = ref("")
+const jobState = reactive(
+  {
+    allJobs:[],
+    isLoading:true
+  }
+)
 
 defineProps(
   {
@@ -24,10 +29,12 @@ onMounted(
     try {
       
       const response = await axios.get('http://127.0.0.1:5000/jobs')
-      allJobs.value = response.data
+      jobState.allJobs = response.data
 
     } catch (error ) {
       console.error("Error fetching jobs", error)
+    } finally {
+      jobState.isLoading = false
     }
     
   }
@@ -46,7 +53,7 @@ onMounted(
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <JobListing v-for="job in allJobs.slice(0, limit || allJobs.length)" :key="job.id" :job="job" />
+        <JobListing v-for="job in jobState.allJobs.slice(0, limit || jobState.allJobs.length)" :key="job.id" :job="job" />
       </div>
 
     </div>
