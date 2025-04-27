@@ -2,9 +2,17 @@
 import JobListingCard from './JobListingCard.vue';
 import JobListing from './JobListing.vue';
 import jobData from "@/jobs.json"
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
 
 const allJobs = ref(jobData)
+
+defineProps(
+  {
+    limit: Number
+  }
+)
+
+
 
 </script>
 
@@ -19,7 +27,7 @@ const allJobs = ref(jobData)
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <JobListing v-for="job in allJobs" :key="job.id" :job="job" />
+        <JobListing v-for="job in allJobs.slice(0,limit||allJobs.length)" :key="job.id" :job="job" />
       </div>
 
     </div>
