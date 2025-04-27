@@ -1,5 +1,6 @@
 <script setup>
 
+import BackButton from '@/components/BackButton.vue';
 import axios from 'axios';
 import { onMounted, reactive } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
@@ -41,12 +42,17 @@ onMounted(
 
 </script>
 
+
 <template>
+  
+  <BackButton />
   
   <!-- show loading spinner while loading is true -->
   <div v-if="jobState.isLoading" class=" text-center text-gray-500 py-6">
     <PulseLoader />
   </div>
+
+  
 
 
   <section v-else class="bg-green-50">
