@@ -1,10 +1,11 @@
 <script setup>
 import JobListingCard from './JobListingCard.vue';
 import JobListing from './JobListing.vue';
-import jobData from "@/jobs.json"
-import { ref, defineProps } from 'vue';
+// import jobData from "@/jobs.json"
+import { ref, defineProps, onMounted } from 'vue';
+import axios from 'axios';
 
-const allJobs = ref(jobData)
+const allJobs = ref("")
 
 defineProps(
   {
@@ -13,6 +14,22 @@ defineProps(
       type: Boolean,
       default: false
     }
+  }
+)
+
+
+
+onMounted(
+  async ()=>{
+    try {
+      
+      const response = await axios.get('http://127.0.0.1:5000/jobs')
+      allJobs.value = response.data
+
+    } catch (error ) {
+      console.error("Error fetching jobs", error)
+    }
+    
   }
 )
 
