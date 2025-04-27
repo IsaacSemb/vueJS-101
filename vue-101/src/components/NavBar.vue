@@ -8,6 +8,12 @@ const isActiveLink = (routePath)=>{
     return route.path === routePath
 }
 
+function getCssClasses(path){
+    const defaultClasses = "hover:text-white rounded-md px-3 py-2"
+    const addedClasses = isActiveLink(path)? 'text-white bg-green-900 hover:bg-gray-900':'text-white hover:bg-green-900'
+    return  addedClasses + ' ' + defaultClasses
+}
+
 </script>
 
 <template>
@@ -23,11 +29,12 @@ const isActiveLink = (routePath)=>{
                     <div class="md:ml-auto">
                         <div class="flex space-x-2">
                             <RouterLink to="/"
-                                :class=" [  isActiveLink('/')?'text-white bg-green-900 hover:bg-gray-900':'text-white hover:bg-green-900' , 'hover:text-white rounded-md px-3 py-2']">Home</RouterLink>
+                            
+                                :class=" [ getCssClasses('/') ]">Home</RouterLink>
                             <RouterLink to="/jobs"
-                                :class="[  isActiveLink('/jobs')?'text-white bg-green-900 hover:bg-gray-900':'text-white hover:bg-green-900' , 'hover:text-white rounded-md px-3 py-2']">Jobs</RouterLink>
+                                :class="[ getCssClasses('/jobs') ]">Jobs</RouterLink>
                             <RouterLink to="/jobs/add"
-                                :class="[  isActiveLink('/jobs/add')?'text-white bg-green-900 hover:bg-gray-900':'text-white hover:bg-green-900' , 'hover:text-white rounded-md px-3 py-2']">Add Job</RouterLink>
+                                :class="[ getCssClasses('/jobs/add') ]">Add Job</RouterLink>
                         </div>
                     </div>
                 </div>
