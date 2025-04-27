@@ -25,7 +25,7 @@ onMounted(
   async () => {
     try {
 
-      const response = await axios.get(`http://127.0.0.1:5000/jobs/${jobId}`)
+      const response = await axios.get(`/api/jobs/${jobId}`)
       jobState.job = response.data
 
     } catch (error) {
