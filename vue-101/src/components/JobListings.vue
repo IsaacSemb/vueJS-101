@@ -16,8 +16,6 @@ defineProps(
   }
 )
 
-
-
 </script>
 
 <template>
@@ -31,7 +29,7 @@ defineProps(
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <JobListing v-for="job in allJobs.slice(0,limit||allJobs.length)" :key="job.id" :job="job" />
+        <JobListing v-for="job in allJobs.slice(0, limit || allJobs.length)" :key="job.id" :job="job" />
       </div>
 
     </div>
@@ -40,11 +38,9 @@ defineProps(
 
   <!-- view all jobs button -->
   <section class="m-auto max-w-lg my-10 px-6" v-if="viewAllJobs">
-      <a
-        href="/jobs"
-        class="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
-        >View All Jobs</a
-      >
-    </section>
+    <RouterLink to="/jobs" class="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700">
+      View All Jobs
+    </RouterLink>
+  </section>
 
 </template>
