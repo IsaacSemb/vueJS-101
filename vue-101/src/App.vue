@@ -16,7 +16,7 @@ import JobListings from './components/JobListings.vue';
     subtitle="Hone and sharpen your skills"
     />
     <HomeCards />
-    <JobListings :limit="2" :view-all-jobs="true" />
+    <JobListings :limit="3" :view-all-jobs="true" />
 
 </template>
 
