@@ -103,7 +103,7 @@ onMounted(
 
             <h3 class="text-xl">Contact Phone:</h3>
 
-            <p class="my-2 bg-green-100 p-2 font-bold">{{ jobState.job.company.phone }}</p>
+            <p class="my-2 bg-green-100 p-2 font-bold">{{ jobState.job.company.contactPhone }}</p>
           </div>
 
           <!-- Manage -->
